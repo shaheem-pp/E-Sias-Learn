@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/maincolor"
+    tools:context=".NotificationReceiver">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="20dp"
+        android:background="@color/Ammar_Temp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="375dp"
+                android:layout_marginTop="16dp"
+                android:onClick="showPopup"
+                android:src="@drawable/ic_baseline_more_vert_24" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/myrbold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Notifications"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="28dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:elevation="10dp"
+        android:id="@+id/ll2"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_margin="0dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/white_bg_top"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="27/6/2020"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/white_bg"
+        android:inputType="textMultiLine"
+        android:maxLength="150"
+        android:singleLine="true"
+        android:padding="20dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad alias aut cumque deleniti dolore id illo impedit maiores mollitia nihil nostrum praesentium quaerat quisquam, repellat saepe, tempora vero voluptatem. Consequatur cum debitis earum enim optio quas! Aspernatur dolor ea eveniet inventore laboriosam, molestias nam natus officia provident repudiandae vero?"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
