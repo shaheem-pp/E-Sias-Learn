@@ -10,14 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".QuestionPaper"></activity>
+        <activity android:name=".mobilewebview"></activity>
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".OnlineClass" />
+        <activity android:name=".QuestionPaper" />
         <activity android:name=".Syllabus" />
         <activity android:name=".NotificationReceiver" />
         <activity android:name=".WebViewOne" />
         <activity android:name=".WebView" />
         <activity android:name=".PublicActivity" />
-        <activity android:name=".StudentActivity" />
-        <activity android:name=".TeacherActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

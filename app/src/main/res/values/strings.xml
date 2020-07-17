@@ -12,11 +12,15 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="online_class">Online Class</string>
     <string name="syllabus">Syllabus</string>
     <string name="question_papers">Question Papers</string>
     <string name="our_team">Our Team</string>
     <string name="notes_and_materials">Notes and Materials</string>
-    <string name="notification">Notification</string>
     <string name="log_out">Log out</string>
+    <string name="online_class">Online Class</string>
+    <string name="magazine">Magazine</string>
+    <string name="notes">Notes</string>
+    <string name="college_website">College Website</string>
+    <string name="exam_results">Exam Results</string>
+    <string name="notification">Notification</string>
 </resources>

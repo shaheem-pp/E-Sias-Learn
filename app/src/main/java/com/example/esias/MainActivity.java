@@ -108,53 +108,72 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void buttonActionsurl() {
-        CardView examresult = (CardView) findViewById(R.id.examresult);
+        final CardView onlineclass = (CardView) findViewById(R.id.online_class);
         CardView magazine = (CardView) findViewById(R.id.magazine);
-        CardView ourteam = (CardView) findViewById(R.id.ourteams);
-        CardView syllabus = (CardView) findViewById(R.id.syllabus);
         CardView notification = (CardView) findViewById(R.id.notification);
+        CardView syllabus = (CardView) findViewById(R.id.syllabus);
         CardView question_paper = (CardView) findViewById(R.id.question_papers);
+        CardView notes = (CardView) findViewById(R.id.notes);
+        CardView collegewebsite = (CardView) findViewById(R.id.college_website);
+        CardView examresult = (CardView) findViewById(R.id.examresult);
+        CardView ourteam = (CardView) findViewById(R.id.ourteams);
 
 
-        examresult.setOnClickListener(new View.OnClickListener() {
+        onlineclass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "http://results.uoc.ac.in/"));
-            }
-        });
-        magazine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-magazine/index.html"));
+                Intent l = new Intent(getApplicationContext(), MainActivity2.class);
+                startActivity(l);
             }
         });
 
-        ourteam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-developers/"));
-            }
-        });
-        syllabus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-syllabus/bca-2.html"));
-            }
-        });
-        notification.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent k = new Intent(getApplicationContext(), NotificationReceiver.class);
-                startActivity(k);
-            }
-        });
-        question_paper.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent j = new Intent(getApplicationContext(), QuestionPaper.class);
-                startActivity(j);
-            }
-        });
+
+//        examresult.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "http://results.uoc.ac.in/"));
+//            }
+//        });
+//        magazine.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-magazine/index.html"));
+//            }
+//        });
+//
+//        ourteam.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-developers/"));
+//            }
+//        });
+//        syllabus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-syllabus/bca-2.html"));
+//            }
+//        });
+//        notification.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent k = new Intent(getApplicationContext(), NotificationReceiver.class);
+//                startActivity(k);
+//            }
+//        });
+//        question_paper.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent j = new Intent(getApplicationContext(), QuestionPaper.class);
+//                startActivity(j);
+//            }
+//        });
+//        collegewebsite.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://www.siasindia.org/"));
+//            }
+//        });
+
 
 //        final TextInputEditText username;
 //        CardView submit;
