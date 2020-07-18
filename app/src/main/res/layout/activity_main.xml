@@ -32,13 +32,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="-5dp" />
 
-        <ImageView
-            android:id="@+id/drawer_icon"
-            android:layout_width="32dp"
-            android:layout_height="28dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/ic_baseline_menu_24" />
+
 
         <ImageView
             android:layout_width="wrap_content"
@@ -93,7 +87,7 @@
                 >
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/online_class"
+                    android:id="@+id/siasclassroom"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
@@ -122,7 +116,7 @@
                             android:layout_margin="5dp"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="@string/online_class"
+                            android:text="SIAS Classroom"
                             android:textColor="#00832F"
                             android:textStyle="bold"
                             app:autoSizeMaxTextSize="13sp"
@@ -315,7 +309,7 @@
                             android:layout_below="@id/collegepng"
                             android:layout_margin="5dp"
                             android:gravity="center"
-                            android:text="@string/question_papers"
+                            android:text="Question Papers"
                             android:textColor="#00832F"
                             android:textStyle="bold"
                             app:autoSizeMaxTextSize="13sp"
@@ -327,7 +321,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/notes"
+                    android:id="@+id/siaspublications"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="20dp"
@@ -359,7 +353,7 @@
                             android:layout_below="@id/resultpng"
                             android:layout_marginTop="5dp"
                             android:gravity="center"
-                            android:text="@string/notes"
+                            android:text="SIAS Publications"
                             android:textColor="#00832F"
                             android:textStyle="bold"
                             app:autoSizeMaxTextSize="13sp"
@@ -430,7 +424,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/examresult"
+                    android:id="@+id/college_time_table"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="20dp"
@@ -465,7 +459,7 @@
                             android:layout_marginTop="0dp"
                             android:layout_marginBottom="5dp"
                             android:gravity="center"
-                            android:text="@string/exam_results"
+                            android:text="College Time Table"
                             android:textColor="#00832F"
                             android:textStyle="bold"
                             app:autoSizeMaxTextSize="13sp"
@@ -477,7 +471,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/ourteams"
+                    android:id="@+id/ourteam"
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="20dp"

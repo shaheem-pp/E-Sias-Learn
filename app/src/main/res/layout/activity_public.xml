@@ -33,14 +33,6 @@
             android:layout_marginTop="-5dp" />
 
         <ImageView
-            android:id="@+id/drawer_icon"
-            android:layout_width="32dp"
-            android:layout_height="28dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/ic_baseline_menu_24" />
-
-        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"

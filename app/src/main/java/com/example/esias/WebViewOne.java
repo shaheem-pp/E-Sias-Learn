@@ -36,16 +36,25 @@ public class WebViewOne extends AppCompatActivity {
         webSettings.setSavePassword(true);
         webSettings.setSaveFormData(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-
-//        webSettings.setLoadWithOverviewMode(true);
-//        webSettings.setEnableSmoothTransition(true);
+        Boolean syllabusPage = false;
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setEnableSmoothTransition(true);
         String url = getIntent().getStringExtra("urltoload");
-        if (url.equals("https://aquibe.github.io/e-sias-syllabus/bca-2.html"))
+
+        syllabusPage = getIntent().getBooleanExtra("syllabusPage", false);
+
+
+        if (url.equals("https://aquibe.github.io/e-sias-developers/")) {
             webView.setInitialScale(150);
-        else
+        } else if (syllabusPage) {
+            webView.setInitialScale(200);
+        } else {
             webView.setInitialScale(100);
+        }
 
         webView.loadUrl(url);
+        final Boolean finalSyllabusPage = syllabusPage;
+        final Boolean finalSyllabusPage1 = syllabusPage;
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
@@ -60,6 +69,8 @@ public class WebViewOne extends AppCompatActivity {
             }
 
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (finalSyllabusPage1)
+                    return false;
                 if (url != null && (url.startsWith("http://") || url.startsWith("https://"))) {
                     view.getContext().startActivity(
                             new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
