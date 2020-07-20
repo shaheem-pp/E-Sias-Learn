@@ -47,7 +47,7 @@ public class WebViewOne extends AppCompatActivity {
         if (url.equals("https://aquibe.github.io/e-sias-developers/")) {
             webView.setInitialScale(150);
         } else if (syllabusPage) {
-            webView.setInitialScale(200);
+            webView.setInitialScale(190);
         } else {
             webView.setInitialScale(100);
         }

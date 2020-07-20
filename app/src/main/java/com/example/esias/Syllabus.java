@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Syllabus extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener {
     String[] course = {"Select Course", "Bsc MB", "Bsc FT", "Bsc BT", "Bsc CS", "BCA", "BA Economics", "BA English", "BBA", "BCom"};
-    String[] batch = {"Select Batch", "2019", "Illinois", "Pecos", "LA"};
+//    String[] batch = {"Select Batch", "2019", "Illinois", "Pecos", "LA"};
     String[] semester = {"Select Semester", "1st", "2nd", "3rd", "4th", "5th", "6th"};
     String getCourse, getBatch, getSemester;
 
@@ -30,11 +30,11 @@ public class Syllabus extends AppCompatActivity implements
         spin.setOnItemSelectedListener(new CountriesSpinnerClass());
 
 
-        ArrayAdapter aa2 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, batch);
-        aa2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        final Spinner spin2 = (Spinner) findViewById(R.id.spinner2);
-        spin2.setAdapter(aa2);
-        spin2.setOnItemSelectedListener(new StatesSpinnerClass());
+//        ArrayAdapter aa2 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, batch);
+//        aa2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        final Spinner spin2 = (Spinner) findViewById(R.id.spinner2);
+//        spin2.setAdapter(aa2);
+//        spin2.setOnItemSelectedListener(new StatesSpinnerClass());
 
         ArrayAdapter aa3 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, semester);
         aa3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -47,7 +47,7 @@ public class Syllabus extends AppCompatActivity implements
             @Override
             public void onClick(View v) {
                 getCourse = spin.getSelectedItem().toString();
-                getBatch = spin2.getSelectedItem().toString();
+//                getBatch = spin2.getSelectedItem().toString();
                 getSemester = spin3.getSelectedItem().toString();
                 checkLink();
             }
@@ -57,7 +57,7 @@ public class Syllabus extends AppCompatActivity implements
     }
 
     public void checkLink() {
-        if(getCourse.equals("BCA")&&getBatch.equals("2019")&&getSemester.equals("1st")){
+        if(getCourse.equals("BCA")&&getSemester.equals("1st")){
             linkMake("https://aquibe.github.io/e-sias-syllabus/bca-1.html");
         }
     }
