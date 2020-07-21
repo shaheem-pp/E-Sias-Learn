@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/maincolor"
-    tools:context=".MainActivity2">
+    tools:context=".UGPGQPSelection">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +24,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
 
                 <ImageView
                     android:id="@+id/drawer_icon"
@@ -57,12 +56,12 @@
                 app:srcCompat="@drawable/greenback">
 
                 <Button
-                    android:id="@+id/studentBtn"
+                    android:id="@+id/ug_qp_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/greenback"
-                    android:text="Student"
+                    android:text="Undergraduate"
                     android:textColor="#fff" />
             </LinearLayout>
 
@@ -74,72 +73,16 @@
                 app:srcCompat="@drawable/greenback">
 
                 <Button
-                    android:id="@+id/teacherBtn"
+                    android:id="@+id/pg_qp_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/greenback"
-                    android:text="Teacher"
+                    android:text="Postgraduate"
                     android:textColor="#fff" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
-    <!--    <RelativeLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content">-->
 
-    <!--        <ImageView-->
-    <!--            android:id="@+id/drawer_icon"-->
-    <!--            android:layout_width="32dp"-->
-    <!--            android:layout_height="28dp"-->
-    <!--            android:layout_marginStart="10dp"-->
-    <!--            android:layout_marginTop="16dp"-->
-    <!--            android:contentDescription="TODO"-->
-    <!--            android:src="@drawable/ic_baseline_arrow_back_ios_24" />-->
-
-    <!--        <LinearLayout-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent"-->
-    <!--            android:layout_gravity="center"-->
-    <!--            android:gravity="center"-->
-    <!--            android:orientation="vertical"-->
-    <!--            android:padding="28dp">-->
-
-
-    <!--            <LinearLayout-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_margin="10dp"-->
-    <!--                android:padding="5dp"-->
-    <!--                app:srcCompat="@drawable/greenback">-->
-
-    <!--                <Button-->
-    <!--                    android:id="@+id/studentBtn"-->
-    <!--                    android:layout_width="match_parent"-->
-    <!--                    android:layout_height="wrap_content"-->
-    <!--                    android:layout_weight="1"-->
-    <!--                    android:background="@drawable/greenback"-->
-    <!--                    android:text="Student"-->
-    <!--                    android:textColor="#fff" />-->
-    <!--            </LinearLayout>-->
-
-    <!--            <LinearLayout-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_margin="10dp"-->
-    <!--                android:padding="5dp"-->
-    <!--                app:srcCompat="@drawable/greenback">-->
-
-    <!--                <Button-->
-    <!--                    android:id="@+id/techerBtn"-->
-    <!--                    android:layout_width="match_parent"-->
-    <!--                    android:layout_height="wrap_content"-->
-    <!--                    android:layout_weight="1"-->
-    <!--                    android:background="@drawable/greenback"-->
-    <!--                    android:text="Teacher"-->
-    <!--                    android:textColor="#fff" />-->
-    <!--            </LinearLayout>-->
-    <!--        </LinearLayout>-->
-    <!--    </RelativeLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

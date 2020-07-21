@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/maincolor"
-    tools:context=".QuestionPaper">
+    tools:context=".SyllabusPG">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,10 +31,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
+                    android:layout_marginTop="-27dp"
                     android:adjustViewBounds="true"
                     android:alpha=".96"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/artboardtopone" />
+                    app:srcCompat="@drawable/slidetwo" />
+
+                <ImageView
+                    android:id="@+id/drawer_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -44,24 +53,13 @@
                     android:fontFamily="@font/myrbold"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="Question Papers"
+                    android:text="Syllabus"
                     android:textAllCaps="false"
                     android:textColor="#fff"
                     android:textSize="28dp"
                     android:textStyle="bold" />
 
-                <ImageView
-                    android:id="@+id/drawer_icon"
-                    android:layout_width="32dp"
-                    android:layout_height="28dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="16dp"
-                    android:src="@drawable/ic_baseline_arrow_back_ios_24"
-                    android:contentDescription="TODO" />
-
             </RelativeLayout>
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -73,17 +71,15 @@
             android:padding="28dp">
 
             <LinearLayout
-                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@drawable/whiteback"
                 android:padding="5dp">
 
-
                 <Spinner
-                    android:id="@+id/qpspinner"
-                    android:layout_width="0dp"
+                    android:id="@+id/spinnerpg"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_weight="1"
@@ -106,7 +102,7 @@
                 android:padding="5dp">
 
                 <Spinner
-                    android:id="@+id/qpspinner3"
+                    android:id="@+id/spinner3pg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -115,10 +111,9 @@
                     android:fontFamily="@font/myrreg"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="Select Batch"
+                    android:text="Select Semester"
                     android:textAlignment="center"
                     android:textSize="25sp"
-
                     android:textStyle="normal" />
 
             </LinearLayout>
@@ -128,10 +123,11 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:padding="5dp"
+                android:clickable="true"
                 app:srcCompat="@drawable/greenback">
 
                 <Button
-                    android:id="@+id/qpsubmit"
+                    android:id="@+id/syllSubmitpg"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -141,4 +137,6 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

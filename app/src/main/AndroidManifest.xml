@@ -10,16 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".mobilewebview"></activity>
-        <activity android:name=".MainActivity2" />
-        <activity android:name=".OnlineClass" />
-        <activity android:name=".QuestionPaper" />
-        <activity android:name=".Syllabus" />
+        <activity android:name=".Publications" />
+        <activity android:name=".TimeTablePG"
+            android:noHistory="true"/>
+        <activity android:name=".TimeTable"
+            android:noHistory="true"/>
+        <activity android:name=".UGPGTTSelection"
+            android:noHistory="true"/>
+        <activity android:name=".UGPGQPSelection"
+            android:noHistory="true"/>
+        <activity android:name=".UGPGSelection"
+            android:noHistory="true"/>
+        <activity android:name=".SyllabusPG"
+            android:noHistory="true"/>
+        <activity android:name=".QuestionPaperPG"
+            android:noHistory="true"/>
+        <activity android:name=".OnlineClass"
+            android:noHistory="true"/>
+        <activity android:name=".QuestionPaper"
+            android:noHistory="true"/>
+        <activity android:name=".Syllabus"
+            android:noHistory="true"/>
         <activity android:name=".NotificationReceiver" />
-        <activity android:name=".WebViewOne" />
-        <activity android:name=".WebView" />
+        <activity android:name=".WebViewOne"
+            android:noHistory="true"/>
         <activity android:name=".PublicActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

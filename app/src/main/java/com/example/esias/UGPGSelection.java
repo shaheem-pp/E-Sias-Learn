@@ -1,19 +1,20 @@
 package com.example.esias;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class OnlineClass extends AppCompatActivity {
+public class UGPGSelection extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_online_class);
+        setContentView(R.layout.activity_u_g_p_g_selection);
 
         ImageView iv = (ImageView) findViewById(R.id.drawer_icon);
         iv.setOnClickListener(new View.OnClickListener() {
@@ -24,31 +25,29 @@ public class OnlineClass extends AppCompatActivity {
             }
         });
 
-        Button student = (Button) findViewById(R.id.studentBtn);
-        student.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                linkMake("https://siaswebapp.herokuapp.com/");
-            }
-        });
-        Button teacher = (Button) findViewById(R.id.teacherBtn);
-        teacher.setOnClickListener(new View.OnClickListener() {
+        Button b1 = (Button) findViewById(R.id.ug_button);
+        Button b2 = (Button) findViewById(R.id.pg_button);
+
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                linkMake("https://siaswebapp.herokuapp.com/login/");
+            public void onClick(View view) {
+                Intent j = new Intent(getApplicationContext(), Syllabus.class);
+                startActivity(j);
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), SyllabusPG.class);
+                startActivity(i);
             }
         });
     }
-
-    public void linkMake(String url) {
-        Intent j = new Intent(getApplicationContext(), WebViewOne.class);
-        j.putExtra("urltoload", url);
-        j.putExtra("teacherPage", true);
-        startActivity(j);
-    }
-
     @Override
     public void onBackPressed() {
         Intent i = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(i);
+        finish();
     }
 }

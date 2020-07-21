@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout dotsLayout;
     private int customPostion = 0;
 
+    private long backPressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         siasclassroom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent l = new Intent(getApplicationContext(), MainActivity2.class);
+                Intent l = new Intent(getApplicationContext(), OnlineClass.class);
                 startActivity(l);
             }
         });
@@ -131,7 +132,8 @@ public class MainActivity extends AppCompatActivity {
         magazine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-magazine/index.html"));
+                linkMake("https://aquibe.github.io/e-sias-magazine/index.html");
+
             }
         });
 
@@ -146,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-syllabus/bca-2.html"));
-                Intent j = new Intent(getApplicationContext(), Syllabus.class);
+                Intent j = new Intent(getApplicationContext(), UGPGSelection.class);
                 startActivity(j);
             }
         });
@@ -154,17 +156,15 @@ public class MainActivity extends AppCompatActivity {
         question_paper.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent j = new Intent(getApplicationContext(), QuestionPaper.class);
-                startActivity(j);
+                Intent k = new Intent(getApplicationContext(), UGPGQPSelection.class);
+                startActivity(k);
             }
         });
 
         siaspublications.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent j = new Intent(getApplicationContext(), QuestionPaper.class);
-//                startActivity(j);
-                Toast.makeText(getApplicationContext(),"Sias Publications", Toast.LENGTH_SHORT).show();
+                linkMake("https://aquibe.github.io/e-sias-publications/");
             }
         });
 
@@ -178,8 +178,8 @@ public class MainActivity extends AppCompatActivity {
         collegetimetable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "http://results.uoc.ac.in/"));
-                Toast.makeText(getApplicationContext(),"Sias Time Table", Toast.LENGTH_SHORT).show();
+                Intent k = new Intent(getApplicationContext(), UGPGTTSelection.class);
+                startActivity(k);
             }
         });
 
@@ -189,35 +189,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-developers/"));
             }
         });
+    }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 
-//        final TextInputEditText username;
-//        CardView submit;
-//        TextView publicenter=(TextView)findViewById(R.id.publiclogin);
-//        publicenter.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this,PublicActivity.class));
-//            }
-//        });
-//        username=(TextInputEditText)findViewById(R.id.usernamelogin);
-//        submit=(CardView)findViewById(R.id.submitlogin);
-//        submit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(username.getText().toString().equals("teacher")) {
-//                    startActivity(new Intent(MainActivity.this, TeacherActivity.class));
-//                }
-//                else if(username.getText().toString().equals("student"))
-//                {
-//                    startActivity(new Intent(MainActivity.this,StudentActivity.class));
-//                }
-//                else
-//                {
-//                    username.setError("Invalid username");
-//                }
-//
-//            }
-//        });
+    public void linkMake(String url) {
+        Intent j = new Intent(getApplicationContext(), WebViewOne.class);
+        j.putExtra("urltoload", url);
+        j.putExtra("teacherPage", true);
+        startActivity(j);
     }
 }
+

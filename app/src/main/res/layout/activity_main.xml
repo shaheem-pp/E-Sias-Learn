@@ -19,7 +19,6 @@
             android:layout_alignParentBottom="true"
             android:layout_marginTop="0dp"
             android:background="@color/maincolor"
-
             >
 
 
@@ -498,7 +497,7 @@
                             android:layout_below="@id/ourteam"
                             android:layout_margin="5dp"
                             android:gravity="center"
-                            android:text="Our Team"
+                            android:text="About Us"
                             android:textColor="#00832F"
                             android:textStyle="bold"
                             app:autoSizeMaxTextSize="13sp"
