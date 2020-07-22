@@ -292,5 +292,6 @@ public class Syllabus extends AppCompatActivity {
     public void onBackPressed() {
         Intent i = new Intent(getApplicationContext(),UGPGSelection.class);
         startActivity(i);
+        finish();
     }
 }

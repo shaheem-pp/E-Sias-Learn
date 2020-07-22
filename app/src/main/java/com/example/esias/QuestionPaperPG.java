@@ -1,7 +1,5 @@
 package com.example.esias;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +8,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class QuestionPaperPG extends AppCompatActivity {
 
@@ -56,110 +56,90 @@ public class QuestionPaperPG extends AppCompatActivity {
 
         switch (getCourse) {
 
-            case "Select Course" :
-                if (getSemester.equals("Select Semester")){
-                    Toast.makeText(this,"Please select a course and semester",Toast.LENGTH_SHORT).show();
+            case "Select Course":
+                if (getSemester.equals("Select Semester")) {
+                    Toast.makeText(this, "Please select a course and semester", Toast.LENGTH_SHORT).show();
                     break;
-                }
-                else {
-                    Toast.makeText(this,"Please select a course",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Please select a course", Toast.LENGTH_SHORT).show();
                     break;
                 }
 
-            case "MCJ" :
+            case "MCJ":
                 if (getSemester.equals("Select Semester")) {
                     Toast.makeText(this, "Please select a semester", Toast.LENGTH_SHORT).show();
                     break;
-                }
-                else if (getSemester.equals("1st")) {
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mcj-1.html");
-                }
-                else if(getSemester.equals("2nd")){
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mcj-2.html");
-                }
-                else if(getSemester.equals("3rd")){
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mcj-3.html");
-                }
-                else {
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mcj-4.html");
+                } else if (getSemester.equals("1st")) {
+                    linkMake("https://drive.google.com/folderview?id=16mBG8F02_U6UvSfE2N0iDQbMx68ZFf76");
+                } else if (getSemester.equals("2nd")) {
+                    linkMake("https://drive.google.com/folderview?id=16mDGYoTa9cElURCXu4K6xHw5c9Hl_DS4");
+                } else if (getSemester.equals("3rd")) {
+                    linkMake("https://drive.google.com/folderview?id=16q-41-gyDl_eLHoG_RO0bndM_EkkWgFZ");
+                } else {
+                    linkMake("https://drive.google.com/folderview?id=16tw9O8AQAmXOtKP8ooL8Si05LWkWrk7T");
                 }
                 break;
 
-            case "Msc MB" :
+            case "Msc MB":
                 if (getSemester.equals("Select Semester")) {
                     Toast.makeText(this, "Please select a semester", Toast.LENGTH_SHORT).show();
                     break;
-                }
-                else if (getSemester.equals("1st")) {
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mmb-1.html");
-                }
-                else if(getSemester.equals("2nd")){
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mmb-2.html");
-                }
-                else if(getSemester.equals("3rd")){
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mmb-3.html");
-                }
-                else {
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mmb-4.html");
+                } else if (getSemester.equals("1st")) {
+                    linkMake("https://drive.google.com/folderview?id=15kpqRvIn_I7AMR6a9MMJPfT3EXqGDgo2");
+                } else if (getSemester.equals("2nd")) {
+                    linkMake("https://drive.google.com/folderview?id=15nSyn-KbsjyXIvzwshMzHxF6gS5lCMvM");
+                } else if (getSemester.equals("3rd")) {
+                    linkMake("https://drive.google.com/folderview?id=15uzy5GqiCgam5OEOF32TlW_0ccbpPCfY");
+                } else {
+                    linkMake("https://drive.google.com/folderview?id=160F37CZkeUFqo-_2uVDS-c-XW_F9uwn1");
                 }
                 break;
 
-            case "Msc BT" :
+            case "Msc BT":
                 if (getSemester.equals("Select Semester")) {
                     Toast.makeText(this, "Please select a semester", Toast.LENGTH_SHORT).show();
                     break;
-                }
-                else if (getSemester.equals("1st")) {
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mbt-1.html");
-                }
-                else if(getSemester.equals("2nd")){
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mbt-2.html");
-                }
-                else if(getSemester.equals("3rd")){
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mbt-3.html");
-                }
-                else {
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mbt-4.html");
+                } else if (getSemester.equals("1st")) {
+                    linkMake("https://drive.google.com/folderview?id=163dX0J_mXykR5jDZMmnctz7Vm5BKsM_i");
+                } else if (getSemester.equals("2nd")) {
+                    linkMake("https://drive.google.com/folderview?id=165f5Y_vxrr_4KnVyWSNa6a4xLRXpwgY7");
+                } else if (getSemester.equals("3rd")) {
+                    linkMake("https://drive.google.com/folderview?id=167DS7CVRTB6Q8f9xDCCYB5Cubdml88m5");
+                } else {
+                    linkMake("https://drive.google.com/folderview?id=168T_cz0POBCulE07W5HmW31jyZy81wa3");
                 }
                 break;
 
-            case "MA IF" :
+            case "MA IF":
                 if (getSemester.equals("Select Semester")) {
                     Toast.makeText(this, "Please select a semester", Toast.LENGTH_SHORT).show();
                     break;
-                }
-                else if (getSemester.equals("1st")) {
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mif-1.html");
-                }
-                else if(getSemester.equals("2nd")){
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mif-2.html");
-                }
-                else if(getSemester.equals("3rd")){
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mif-3.html");
-                }
-                else {
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mif-4.html");
+                } else if (getSemester.equals("1st")) {
+                    linkMake("https://drive.google.com/folderview?id=15_0JcFYiW5ILEQGgNaBGIWhS4HgXdIyi");
+                } else if (getSemester.equals("2nd")) {
+                    linkMake("https://drive.google.com/folderview?id=15bFpaQcJYSpMY5e2qlmXPF6RWY3Xjjlc");
+                } else if (getSemester.equals("3rd")) {
+                    linkMake("https://drive.google.com/folderview?id=15cfenuC7KpcF283xYK5Nbe-9wlbHbiF6");
+                } else {
+                    linkMake("https://drive.google.com/folderview?id=15fjHijWYI-fhgdLl3Gk1PiHoA69fVJod");
                 }
                 break;
 
-            case "Msc FT" :
+            case "Msc FT":
                 if (getSemester.equals("Select Semester")) {
                     Toast.makeText(this, "Please select a semester", Toast.LENGTH_SHORT).show();
                     break;
-                }
-                else if (getSemester.equals("1st")) {
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mft-1.html");
-                }
-                else if(getSemester.equals("2nd")){
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mft-2.html");
-                }
-                else if(getSemester.equals("3rd")){
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mft-3.html");
-                }
-                else {
-                    linkMake("https://aquibe.github.io/e-sias-question-paper/mft-4.html");
+                } else if (getSemester.equals("1st")) {
+                    linkMake("https://drive.google.com/folderview?id=15LkfCPfZOTfIG6wQo-IJW6jWPSVhapRH");
+                } else if (getSemester.equals("2nd")) {
+                    linkMake("https://drive.google.com/folderview?id=15Lz0dfmYzpCKmfossjxu8FjvXm3WBkGN");
+                } else if (getSemester.equals("3rd")) {
+                    linkMake("https://drive.google.com/folderview?id=15O-eYtVv3pwIVXsv9jitsOqKF6-bikvs");
+                } else {
+                    linkMake("https://drive.google.com/folderview?id=15OXadZmYb2VvTaB7AHQMsfF_Vo_6LYy2");
                 }
                 break;
+
         }
     }
 
@@ -169,9 +149,11 @@ public class QuestionPaperPG extends AppCompatActivity {
         j.putExtra("syllabusPage", true);
         startActivity(j);
     }
+
     @Override
     public void onBackPressed() {
-        Intent i = new Intent(getApplicationContext(),UGPGQPSelection.class);
+        Intent i = new Intent(getApplicationContext(), UGPGQPSelection.class);
         startActivity(i);
+        finish();
     }
 }

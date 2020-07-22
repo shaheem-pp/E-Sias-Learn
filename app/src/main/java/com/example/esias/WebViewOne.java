@@ -47,36 +47,36 @@ public class WebViewOne extends AppCompatActivity {
         String url = getIntent().getStringExtra("urltoload");
 
         syllabusPage = getIntent().getBooleanExtra("syllabusPage", false);
-        teacherPage = getIntent().getBooleanExtra("teacherPage",false);
+        teacherPage = getIntent().getBooleanExtra("teacherPage", false);
 
         if (url.equals("https://aquibe.github.io/e-sias-developers/")) {
             webView.setInitialScale(90);
         } else if (syllabusPage) {
             webView.setInitialScale(200);
-        } else if(url.equals("https://aquibe.github.io/e-sias-notification/")){
+        } else if (url.equals("https://aquibe.github.io/e-sias-notification/")) {
             webView.setInitialScale(200);
-        }
-          else if(url.equals("https://siaswebapp.herokuapp.com/")) {
+        } else if (url.equals("https://siaswebapp.herokuapp.com/")) {
             webView.setInitialScale(250);
-        }
-          else if(url.equals("https://aquibe.github.io/e-sias-publications/")) {
+        } else if (url.equals("https://aquibe.github.io/e-sias-publications/")) {
             webView.setInitialScale(200);
-        }
-          else if(url.equals("https://siaswebapp.herokuapp.com/login/")) {
+        } else if (url.equals("https://siaswebapp.herokuapp.com/login/")) {
             webView.setInitialScale(250);
-        }
-          else {
+        } else {
             webView.setInitialScale(100);
         }
 
-          if(url.equals("https://aquibe.github.io/e-sias-magazine/index.html") || url.equals("https://aquibe.github.io/e-sias-notification/") || url.equals("https://aquibe.github.io/e-sias-publications/")){
+        if (url.equals("https://aquibe.github.io/e-sias-magazine/index.html") || url.equals("https://aquibe.github.io/e-sias-notification/") || url.equals("https://aquibe.github.io/e-sias-publications/")) {
             webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
             webSettings.setAppCacheEnabled(false);
         }
-           if(url.equals("https://siaswebapp.herokuapp.com/") || url.equals("https://siaswebapp.herokuapp.com/login/")){
-              webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-              webSettings.setAppCacheEnabled(true);
-          }
+//        if (url.equals("https://siaswebapp.herokuapp.com/")) {
+//            webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+//            webSettings.setAppCacheEnabled(true);
+//        }
+        if (url.equals("https://siaswebapp.herokuapp.com/login/")) {
+            webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
+            webSettings.setAppCacheEnabled(false);
+        }
 
         webView.loadUrl(url);
         final Boolean finalSyllabusPage1 = syllabusPage;
@@ -97,10 +97,10 @@ public class WebViewOne extends AppCompatActivity {
             }
 
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                if(finalSyllabusPage1)
+                if (finalSyllabusPage1)
                     return false;
 
-                if(finalTeacherPage)
+                if (finalTeacherPage)
                     return false;
 
                 if (url != null && (url.startsWith("http://") || url.startsWith("https://"))) {
@@ -121,7 +121,6 @@ public class WebViewOne extends AppCompatActivity {
     }
 
 
-
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (event.getAction() == KeyEvent.ACTION_DOWN) {
@@ -136,5 +135,9 @@ public class WebViewOne extends AppCompatActivity {
             }
         }
         return super.onKeyDown(keyCode, event);
+    }
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }

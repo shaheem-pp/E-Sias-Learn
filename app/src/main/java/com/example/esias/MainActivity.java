@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         imageSliderAdapter = new ImageSliderAdapter(image, this);
         viewPager.setAdapter(imageSliderAdapter);
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         prepareDots(customPostion++);
         createSlideShow();
         buttonActionsurl();
+
 
         viewPager.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void createSlideShow() {
         final Handler handler = new Handler();
@@ -126,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent l = new Intent(getApplicationContext(), OnlineClass.class);
                 startActivity(l);
+                onBackPressed();
             }
         });
 
@@ -150,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-syllabus/bca-2.html"));
                 Intent j = new Intent(getApplicationContext(), UGPGSelection.class);
                 startActivity(j);
+                onBackPressed();
             }
         });
 
@@ -158,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent k = new Intent(getApplicationContext(), UGPGQPSelection.class);
                 startActivity(k);
+                onBackPressed();
             }
         });
 
@@ -180,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent k = new Intent(getApplicationContext(), UGPGTTSelection.class);
                 startActivity(k);
+                onBackPressed();
             }
         });
 
