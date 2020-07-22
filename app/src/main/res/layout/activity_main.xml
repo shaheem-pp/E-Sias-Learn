@@ -18,8 +18,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="0dp"
-            android:background="@color/maincolor"
-            >
+            android:background="@color/maincolor">
 
 
         </FrameLayout>
@@ -30,7 +29,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginTop="-5dp" />
-
 
 
         <ImageView
@@ -151,6 +149,7 @@
                             android:layout_height="35dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="20dp"
+                            android:backgroundTint="#00832F"
                             android:src="@drawable/ic_baseline_menu_book_24"
 
                             />

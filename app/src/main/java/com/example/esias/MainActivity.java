@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent l = new Intent(getApplicationContext(), OnlineClass.class);
                 startActivity(l);
-                onBackPressed();
+                
             }
         });
 
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(new Intent(MainActivity.this, WebViewOne.class).putExtra("urltoload", "https://aquibe.github.io/e-sias-syllabus/bca-2.html"));
                 Intent j = new Intent(getApplicationContext(), UGPGSelection.class);
                 startActivity(j);
-                onBackPressed();
+                
             }
         });
 
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent k = new Intent(getApplicationContext(), UGPGQPSelection.class);
                 startActivity(k);
-                onBackPressed();
+                
             }
         });
 
@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent k = new Intent(getApplicationContext(), UGPGTTSelection.class);
                 startActivity(k);
-                onBackPressed();
+                
             }
         });
 

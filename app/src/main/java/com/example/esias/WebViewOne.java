@@ -75,7 +75,7 @@ public class WebViewOne extends AppCompatActivity {
 //        }
         if (url.equals("https://siaswebapp.herokuapp.com/login/")) {
             webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
-            webSettings.setAppCacheEnabled(false);
+            webSettings.setAppCacheEnabled(true);
         }
 
         webView.loadUrl(url);

@@ -12,4 +12,8 @@ public class Publications extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_publications);
     }
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }

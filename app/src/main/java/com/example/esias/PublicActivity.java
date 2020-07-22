@@ -158,6 +158,9 @@ public class PublicActivity extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 
 }

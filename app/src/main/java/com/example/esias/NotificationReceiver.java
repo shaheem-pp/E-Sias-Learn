@@ -45,5 +45,9 @@ public class NotificationReceiver extends AppCompatActivity implements PopupMenu
                 return false;
         }
     }
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 
 }
