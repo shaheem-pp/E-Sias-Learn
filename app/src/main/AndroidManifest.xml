@@ -33,7 +33,7 @@
             android:noHistory="true"/>
         <activity android:name=".NotificationReceiver" />
         <activity android:name=".WebViewOne"
-            android:noHistory="true"/>
+            android:noHistory="false"/>
         <activity android:name=".PublicActivity" />
         <activity android:name=".MainActivity"
             >
